@@ -1,112 +1,165 @@
-.home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    /* margin-top: 4rem; */
+.hero {
+    position: relative;
+    min-height: 100vh;
 }
 
-
-.home .home-content {
+.hero-grid{
+    padding-top: calc(70px + 2rem);
+    padding-bottom: 1rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    justify-content: center;
     align-items: center;
-    padding: 1rem;
-    margin: 2.5rem 0;
 }
 
-
-.home .max-width {
-    margin: auto 0 auto 40px;
+.hero-desc h1{
+    font-size: 2.7rem;
+    margin-bottom: 1rem;
 }
 
-.home .home-content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    margin: 2.5rem 0;
-}
-
-.home .home-content .home-info {
+.hero-desc p{
     width: 100%;
-    min-width: 300px;
+    max-width: 510px;
+    margin-bottom: 2.5rem;
+    font-size: 1.2rem;
+    line-height: 2rem;
 }
 
-.home .home-content .home-info .text {
-    margin-top: 1.5rem;
+.hero-input{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 4rem;
 }
 
-.home .home-content .home-info .home-email {
-    margin-top: 3rem;
-}
-
-.home .home-content .home-info .home-email input {
-    background: none;
+.hero-input input{
+    background: var(--color-white);
     border: none;
-    border-radius: .9rem;
-    box-shadow: 10px 20px 60px rgba(0,0,0,.4);
-    padding: .5rem 1rem;
-    outline: none;
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .2);
+    padding: .6rem .8rem;
 }
 
-.home .home-content .home-info .home-email .btn {
-    color: var(--color-white);
+.hero-input button {
     background: var(--color-orange);
+    color: var(--color-white);
     border: 1px solid  var(--color-orange);
-    border-radius: 1rem;
-    padding: .5rem 1rem;
-    margin-left: .7rem;
-    outline: none;
-}
-
-.home .home-content .home-info .home-email .btn:hover {
-    color: var(--color-black);
-    background: none;
-    border: 1px solid  var(--color-orange);
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .2);
+    padding: .6rem .8rem;
+    margin-left: .6rem;
+    cursor: pointer;
     transition: var(--transition);
 }
 
-.home .home-content .home-image {
-    width: 500px;
-    height: 500px;
+.hero-input button:hover {
+    background: none;
+    color: var(--color-black);
 }
 
-.home .home-content .home-image img {
-    width: 100%;
-    height: 100%;
+.hero-img{
+    display: flex;
+    justify-content: flex-end;
 }
 
+/* MEDIA QUERIES */
+@media only screen and (max-width:960px){
 
-@media (max-width: 947px) {
-
-.max-width {
-    padding: 0 50px;
-    margin: auto;
+    /* hero section */
+.hero{
+    min-height: 65vh;
 }
-
-.home .home-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-    justify-content: center;
+.hero-grid{
+    grid-template-columns: 100%;
     align-items: center;
     text-align: center;
-    padding-top: 3rem;
-    margin-top: 3rem;
-    /* padding: 1rem; */
 }
 
-.home .home-content .home-image {
-    width: 500px;
-    height: 500px;
+.hero-desc p{
+    width: 100%;
+    max-width: 100%;
+}
+
+.hero-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+.hero-img{
+    display: none;
+}
+}
+
+@media only screen and (max-width:500px){
+.hero-desc h1{
+    font-size: 2rem;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media (max-width:960px) {
+.hero{
+    min-height: 65vh;
+    text-align: center;
+}
+
+.hero-grid{
+    display: inline-block;
+    grid-template-columns: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+}
+
+.hero-desc {
+    
+}
+
+.hero-desc p{
+    width: 100%;
+    max-width: 510px;
+    margin: auto;
+    margin-bottom: 2.5rem;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+.hero-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+
+.hero-desc, .hero-btn{
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-img{
+    width: 400px;
+    height: 400px;
     margin: auto;
 }
+} */
 
 
-}
+

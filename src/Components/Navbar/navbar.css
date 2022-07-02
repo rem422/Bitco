@@ -1,124 +1,116 @@
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 15px 0;
-    background-color: var(--color-white);
-    font-family: var(--font-ubuntu);
-}
-
-.navbar.sticky {
-    box-shadow: 0 2px 2px 1px rgba(0,0,0,.8);
-}
-
-.navbar .max-width {
+.navbar .wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    background: var(--color-white);
+    z-index: 999;
 }
 
-.navbar .logo a {
-    color: var(--color-black);
-    font-size: 36px;
-    font-weight: 600;
+.navbar.sticky .wrapper {
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, .2);
+    transition: var(--transition);
 }
 
-.navbar .logo a span {
-    background-color: var(--color-orange);
+.navbar .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .logo {
     font-size: 30px;
     font-weight: 600;
 }
 
-.navbar .menu li {
-    list-style: none;
-    display: inline-block;
+.navbar .logo span {
+    background: var(--color-orange);
+    font-size: 30px;
+    font-weight: 600;
 }
 
-.navbar .menu li a {
-    color: var(--color-black);
+.navbar li {
+    padding-right: 2rem;
+}
+
+.navbar li a {
     font-size: 18px;
-    /* font-weight: 500; */
-    margin-left: 25px;
-}
-
-.navbar .menu li:hover a {
-    color: var(--color-orange);
+    cursor: pointer;
     transition: var(--transition);
 }
 
-.navbar .menu .login-btn {
-    background: none;
-    border-radius: 200px;
-    border: 1px solid  var(--color-orange);
-    padding: 5px 12px;
-    font-size: 16px;
-    font-weight: 500;
-    margin-left: 25px;
-    cursor: pointer;
+.navbar li:hover a {
+    color: var(--color-orange);
 }
 
-.navbar .menu .login-btn:hover {
+.navbar .login button {
+    background: none;
+    border: 1px solid var(--color-orange);
+    border-radius: 20px;
+    padding: .3rem 1.3rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.navbar .login:hover button {
     background: var(--color-orange);
     color: var(--color-white);
-    transition: var(--transition);
-    
 }
 
-/* menu btn styling */
-.menu-btn {
+.menu_btn {
     display: none;
-    color: var(--color-black);
-    font-size: 30px;
-    cursor: pointer;
 }
 
 
-/* Media queries */
-@media (max-width: 947px) {
-
-.max-width {
-    padding: 0 50px;
-    margin: auto;
-}
-
-/* menu btn styling */
-.menu-btn {
+/* MEDIA QUERIES  */
+@media only screen and (max-width:768px){
+/* mobile menu btn */
+.menu_btn{
     display: block;
     z-index: 999;
 }
 
+.navbar .logo {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.navbar .logo span {
+    background: var(--color-orange);
+    font-size: 26px;
+    font-weight: 600;
+}
+
 .navbar .menu {
+    display: block;
     position: fixed;
-    height: 100vh;
-    width: 100%;
-    right: -100%;
-    top: 0;
     background: var(--color-white);
-    /* box-shadow: 0px 0px 5px rgba(0,0, 0,0.2);  */
-    /* border-radius: 5px; */
-    text-align: center;
-    padding: 80px;
-    transition: all .6s ease;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .3);
+    right: -100%;
+    top: 65px;
+    width: 220px;
+    border-radius: 8px;
     z-index: -1;
+    transition: var(--transition);
 }
 
 .navbar .menu.active {
     right: 0;
 }
 
-.navbar .menu li {
-    display: block;
+.navbar li {
+    margin-left: 0rem;
 }
 
-.navbar .menu li a,
-.navbar .menu .login-btn{
+.navbar li a {
+    padding: 10px;
     display: inline-block;
-    font-size: 25px;
-    margin: 15px 0;
 }
 
-.navbar .menu .login-btn {
-    margin: 3rem 0;
+.navbar .login {
+    padding: 10px 6px;
 }
 }
 

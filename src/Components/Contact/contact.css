@@ -1,0 +1,77 @@
+.contact-grid{
+    padding-top: calc(70px + 2rem);
+    padding-bottom: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.contact-input input{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    background: rgb(236, 234, 234);
+    border: none;
+    border-radius: 30px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .2);
+    padding: .8rem .8rem;
+}
+
+.contact-input button {
+    background: var(--color-orange);
+    color: var(--color-white);
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid  var(--color-orange);
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .2);
+    padding: .6rem .8rem;
+    margin: 1rem 0;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+
+@media (max-width:768px) {
+.contact-grid{
+    grid-template-columns: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.contact-desc p{
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1.8rem;
+}
+
+.contact-input input{
+    max-width: 100%;
+}
+
+.contact-input button {
+    max-width: 100%;
+}
+} 
+
+@media (max-width:500px) {
+.contact-grid{
+    padding-top: 1.5rem;
+}
+
+
+.about-desc h2{
+    font-size: 1.8rem;
+}
+} 
+
+
+
+
+
+
+
+
