@@ -69,7 +69,6 @@ footer a:hover, footer li{
     align-items: center;
     justify-content: center;
     width: 100%;
-    /* text-align: center; */
 }
 
 .footer-right {
@@ -91,7 +90,6 @@ footer a:hover, footer li{
     align-items: flex-start;
     margin: 1rem 3rem;
 }
-
 }
 
 @media (max-width:500px){
@@ -100,8 +98,8 @@ footer a:hover, footer li{
     grid-template-columns: repeat(2, 1fr);
 }
 
-.footer-menu-block{
-    margin: 1rem auto;
+.footer-menu-block li:last-child a{
+    margin: 0rem;
 }
 }
 

@@ -1,7 +1,7 @@
 .scroll-up-btn {
     position: fixed;
-    height: 30px;
-    width: 30px; 
+    height: 40px;
+    width: 40px; 
     background: var(--color-orange);
     right: 20px;
     bottom: 10px;
