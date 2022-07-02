@@ -15,7 +15,8 @@
     width: 80%;
     margin: auto;
     flex-wrap: wrap;
-    overflow-x: hidden;
+    overflow-x: auto;
+    outline: hidden;
 }
 
 @media only screen and (max-width:1280px){
